@@ -12,7 +12,6 @@ class GiphyOverlay extends StatelessWidget {
       child,
       Positioned(
           left: 0,
-          right: 0,
           bottom: 0,
           height: 16,
           width: 146,
