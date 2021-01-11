@@ -100,7 +100,7 @@ class _GiphySearchViewState extends State<GiphySearchView> {
                 } else if (snapshot.hasError) {
                   return Center(child: Text('An error occurred'));
                 }
-                return Center(child: CircularProgressIndicator());
+                return Center(child: CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(Color.fromARGB(255, 44, 149, 215)),));
               }))
     ]);
   }
