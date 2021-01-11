@@ -51,11 +51,16 @@ class _GiphySearchViewState extends State<GiphySearchView> {
             if (!giphyDecorator.showAppBar) BackButton(),
             Expanded(
               child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 10),
+                padding: EdgeInsets.symmetric(horizontal: 20),
                 child: TextField(
                   controller: _textController,
                   decoration: InputDecoration(
                     hintText: giphy.searchText,
+                    border: InputBorder.none,
+                    focusedBorder: InputBorder.none,
+                    enabledBorder: InputBorder.none,
+                    errorBorder: InputBorder.none,
+                    disabledBorder: InputBorder.none,
                   ).applyDefaults(
                     giphyDecorator.giphyTheme.inputDecorationTheme,
                   ),
