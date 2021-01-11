@@ -14,7 +14,7 @@ class GiphyOverlay extends StatelessWidget {
           left: 0,
           bottom: 0,
           height: 16,
-          width: 146,
+          width: 116,
           child: IgnorePointer(
               child: Container(
                   alignment: Alignment.centerLeft,
