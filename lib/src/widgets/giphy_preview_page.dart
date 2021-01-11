@@ -16,7 +16,7 @@ class GiphyPreviewPage extends StatelessWidget {
     final media = MediaQuery.of(context);
 
     return Scaffold(
-        appBar: AppBar(title: title, actions: <Widget>[
+        appBar: AppBar(title: title, toolbarHeight: 50, actions: <Widget>[
           IconButton(icon: Icon(Icons.check), onPressed: () => onSelected(gif))
         ]),
         body: SafeArea(
