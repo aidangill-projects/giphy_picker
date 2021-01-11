@@ -15,11 +15,12 @@ class GiphyOverlay extends StatelessWidget {
           right: 0,
           bottom: 0,
           height: 16,
+          width: 146,
           child: IgnorePointer(
               child: Container(
                   alignment: Alignment.centerLeft,
                   color: Colors.black45,
-                  padding: EdgeInsets.symmetric(vertical: 2),
+                  padding: EdgeInsets.symmetric(vertical: 2, horizontal: 2),
                   child: Image.asset(
                       'assets/PoweredBy_200px-Black_HorizText.png',
                       package: 'giphy_picker',

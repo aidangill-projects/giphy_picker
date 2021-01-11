@@ -51,7 +51,7 @@ class _GiphySearchViewState extends State<GiphySearchView> {
             if (!giphyDecorator.showAppBar) BackButton(),
             Expanded(
               child: Padding(
-                padding: EdgeInsets.fromLTRB(20, 5, 20, 5),
+                padding: EdgeInsets.fromLTRB(15, 6, 15, 5),
                 child: TextField(
                   controller: _textController,
                   decoration: InputDecoration(

@@ -88,6 +88,6 @@ class _GiphyImageState extends State<GiphyImage> {
           }
           return image;
         }
-        return widget.placeholder ?? Center(child: CircularProgressIndicator());
+        return widget.placeholder ?? Center(child: CircularProgressIndicator(valueColor: new AlwaysStoppedAnimation<Color>(Color.fromARGB(255, 44, 149, 215)),));
       });
 }
