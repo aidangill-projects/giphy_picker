@@ -15,9 +15,12 @@ class GiphySearchPage extends StatelessWidget {
       return Theme(
         data: giphyDecorator.giphyTheme,
         child: Scaffold(
-          appBar: giphyDecorator.showAppBar != null && giphyDecorator.showAppBar
-              ? AppBar(title: title, toolbarHeight: 50)
-              : null,
+          appBar: AppBar(
+            toolbarHeight: 50,
+            actions: <Widget>[
+              Container(padding: EdgeInsets.fromLTRB(10, 10, 20, 10), child: Image(image: AssetImage("assets/giffy_logo.png"))),
+            ],
+          ),
           body: SafeArea(
             child: GiphySearchView(),
             bottom: false,

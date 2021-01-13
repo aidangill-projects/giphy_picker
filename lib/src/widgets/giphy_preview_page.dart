@@ -18,7 +18,7 @@ class GiphyPreviewPage extends StatelessWidget {
         appBar: AppBar(
           toolbarHeight: 50,
           actions: <Widget>[
-            Container(padding: EdgeInsets.fromLTRB(10, 10, 10, 10), child: Image(image: AssetImage("assets/giffy_logo.png"))),
+            Container(padding: EdgeInsets.fromLTRB(10, 10, 20, 10), child: Image(image: AssetImage("assets/giffy_logo.png"))),
           ],
         ),
         body: SafeArea(
@@ -30,6 +30,7 @@ class GiphyPreviewPage extends StatelessWidget {
                   width: media.orientation == Orientation.portrait ? double.maxFinite : null,
                   height: media.orientation == Orientation.landscape ? double.maxFinite : null,
                   fit: BoxFit.contain,
+                  renderGiphyOverlay: false,
                 ))),
             bottom: false),
         floatingActionButton: FloatingActionButton(
