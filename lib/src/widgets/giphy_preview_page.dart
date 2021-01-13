@@ -16,10 +16,10 @@ class GiphyPreviewPage extends StatelessWidget {
 
     return Scaffold(
         appBar: AppBar(
-          title: Image(image: AssetImage("asset/giffy_logo.png")),
+          title: Image(image: AssetImage("assets/giffy_logo.png")),
           toolbarHeight: 50,
           actions: <Widget>[
-            Image(image: AssetImage("asset/giffy_logo.png")),
+            Image(image: AssetImage("assets/giffy_logo.png")),
           ],
         ),
         body: SafeArea(
