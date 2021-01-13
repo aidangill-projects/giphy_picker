@@ -18,7 +18,7 @@ class GiphySearchPage extends StatelessWidget {
           appBar: AppBar(
             toolbarHeight: 50,
             actions: <Widget>[
-              Container(padding: EdgeInsets.fromLTRB(10, 10, 20, 10), child: Image(image: AssetImage("assets/giffy_logo.png"))),
+              Container(padding: EdgeInsets.fromLTRB(10, 10, 15, 10), child: Image(image: AssetImage("assets/giffy_logo.png"))),
             ],
           ),
           body: SafeArea(
