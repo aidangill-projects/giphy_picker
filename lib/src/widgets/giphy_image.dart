@@ -37,6 +37,18 @@ class GiphyImage extends StatefulWidget {
       : url = gif.images.original.url,
         super(key: key ?? Key(gif.id));
 
+  /// Loads the original image for given Giphy gif.
+  GiphyImage.downsized(
+      {Key key,
+        @required GiphyGif gif,
+        this.placeholder,
+        this.width,
+        this.height,
+        this.fit,
+        this.renderGiphyOverlay = true})
+      : url = gif.images.downsizedLarge.url,
+        super(key: key ?? Key(gif.id));
+
   /// Loads the original still image for given Giphy gif.
   GiphyImage.originalStill(
       {Key key,

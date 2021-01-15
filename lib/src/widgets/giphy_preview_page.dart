@@ -25,7 +25,7 @@ class GiphyPreviewPage extends StatelessWidget {
             child: Container(
                 color: Colors.black,
                 child: Center(
-                    child: GiphyImage.original(
+                    child: GiphyImage.downsized(
                   gif: gif,
                   width: media.orientation == Orientation.portrait ? double.maxFinite : null,
                   height: media.orientation == Orientation.landscape ? double.maxFinite : null,
