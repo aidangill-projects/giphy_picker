@@ -38,14 +38,14 @@ class GiphyImage extends StatefulWidget {
 
   /// Loads the original image for given Giphy gif.
   GiphyImage.downsized(
-      {Key key,
-        @required GiphyGif gif,
+      {Key? key,
+        @required GiphyGif? gif,
         this.placeholder,
         this.width,
         this.height,
         this.fit,
         this.renderGiphyOverlay = true})
-      : url = gif.images.downsizedLarge.url,
+      : url = gif!.images.downsizedLarge!.url,
         super(key: key ?? Key(gif.id));
 
   /// Loads the original still image for given Giphy gif.
@@ -64,8 +64,7 @@ class GiphyImage extends StatefulWidget {
   _GiphyImageState createState() => _GiphyImageState();
 
   /// Loads the images bytes for given url from Giphy.
-  static Future<Uint8List> load(String url, {Client client}) async {
-    assert(url != null);
+  static Future<Uint8List?> load(String? url, {Client? client}) async {
 
     Uri uri = new Uri(path: url);
 

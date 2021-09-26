@@ -8,10 +8,7 @@ class GiphyPreviewPage extends StatelessWidget {
   final Widget? title;
   final ValueChanged<GiphyGif>? onSelected;
 
-  final Widget title;
-  final ValueChanged<GiphyGif> onSelected;
-
-  const GiphyPreviewPage({@required this.gif, @required this.onSelected, this.title});
+  const GiphyPreviewPage({required this.gif, @required this.onSelected, this.title});
 
   @override
   Widget build(BuildContext context) {
@@ -38,7 +35,7 @@ class GiphyPreviewPage extends StatelessWidget {
             bottom: false),
         floatingActionButton: FloatingActionButton(
           onPressed: () {
-            onSelected(gif);
+            onSelected!(gif);
           },
           child: Icon(Icons.check),
           backgroundColor: Color.fromARGB(255, 44, 149, 215),

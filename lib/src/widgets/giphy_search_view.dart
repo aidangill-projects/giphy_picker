@@ -71,7 +71,7 @@ class _GiphySearchViewState extends State<GiphySearchView> {
                     errorBorder: InputBorder.none,
                     disabledBorder: InputBorder.none,
                   ).applyDefaults(
-                    giphyDecorator.giphyTheme.inputDecorationTheme,
+                    giphyDecorator.giphyTheme!.inputDecorationTheme,
                   ),
                   onChanged: (value) => _delayedSearch(giphy, value),
                 ),
