@@ -68,8 +68,10 @@ class GiphyImage extends StatefulWidget {
   static Future<Uint8List> load(String url, {Client client}) async {
     assert(url != null);
 
+    Uri uri = new Uri(path: url);
+
     final response =
-        await (client ?? Client()).get(url, headers: {'accept': 'image/*'});
+        await (client ?? Client()).get(uri, headers: {'accept': 'image/*'});
 
     if (response.statusCode == 200) {
       return response.bodyBytes;

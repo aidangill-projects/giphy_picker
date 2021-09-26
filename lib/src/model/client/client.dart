@@ -99,8 +99,7 @@ class GiphyClient {
           .replace(
             queryParameters: Map<String, String>.from(uri.queryParameters)
               ..putIfAbsent('api_key', () => _apiKey),
-          )
-          .toString(),
+          ),
     );
 
     if (response.statusCode == 200) {
