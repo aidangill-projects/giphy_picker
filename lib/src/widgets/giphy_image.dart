@@ -1,5 +1,4 @@
 import 'dart:typed_data';
-
 import 'package:flutter/material.dart';
 import 'package:http/http.dart';
 import 'package:giphy_picker/src/model/giphy_client.dart';
@@ -7,17 +6,17 @@ import 'package:giphy_picker/src/widgets/giphy_overlay.dart';
 
 /// Loads and renders a Giphy image.
 class GiphyImage extends StatefulWidget {
-  final String url;
-  final Widget placeholder;
-  final double width;
-  final double height;
-  final BoxFit fit;
+  final String? url;
+  final Widget? placeholder;
+  final double? width;
+  final double? height;
+  final BoxFit? fit;
   final bool renderGiphyOverlay;
 
   /// Loads an image from given url.
   const GiphyImage(
-      {Key key,
-      @required this.url,
+      {Key? key,
+      this.url,
       this.placeholder,
       this.width,
       this.height,
@@ -27,14 +26,14 @@ class GiphyImage extends StatefulWidget {
 
   /// Loads the original image for given Giphy gif.
   GiphyImage.original(
-      {Key key,
-      @required GiphyGif gif,
+      {Key? key,
+      required GiphyGif gif,
       this.placeholder,
       this.width,
       this.height,
       this.fit,
       this.renderGiphyOverlay = true})
-      : url = gif.images.original.url,
+      : url = gif.images.original?.url,
         super(key: key ?? Key(gif.id));
 
   /// Loads the original image for given Giphy gif.
@@ -51,14 +50,14 @@ class GiphyImage extends StatefulWidget {
 
   /// Loads the original still image for given Giphy gif.
   GiphyImage.originalStill(
-      {Key key,
-      @required GiphyGif gif,
+      {Key? key,
+      required GiphyGif gif,
       this.placeholder,
       this.width,
       this.height,
       this.fit,
       this.renderGiphyOverlay = true})
-      : url = gif.images.originalStill.url,
+      : url = gif.images.originalStill?.url,
         super(key: key ?? Key(gif.id));
 
   @override
@@ -81,7 +80,7 @@ class GiphyImage extends StatefulWidget {
 }
 
 class _GiphyImageState extends State<GiphyImage> {
-  Future<Uint8List> _loadImage;
+  late Future<Uint8List?> _loadImage;
 
   @override
   void initState() {
@@ -92,9 +91,9 @@ class _GiphyImageState extends State<GiphyImage> {
   @override
   Widget build(BuildContext context) => FutureBuilder(
       future: _loadImage,
-      builder: (BuildContext context, AsyncSnapshot<Uint8List> snapshot) {
+      builder: (BuildContext context, AsyncSnapshot<Uint8List?> snapshot) {
         if (snapshot.hasData) {
-          final image = Image.memory(snapshot.data,
+          final image = Image.memory(snapshot.data!,
               width: widget.width, height: widget.height, fit: widget.fit);
 
           if (widget.renderGiphyOverlay) {
